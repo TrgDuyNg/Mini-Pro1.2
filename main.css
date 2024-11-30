@@ -1,0 +1,149 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#3b3a3fef;
+}
+header{
+    /* flex giúp cho các phần tử cobn bên trong <header> được bố trí theo một trục (mặc định là trục ngang) */
+    display: flex; 
+    /* Phần tử đầu tiên (logo) được căn sang phía bên trái của header.
+    Phần tử cuối cùng (menu) được căn sang phía bên phải của header */
+    justify-content: space-between;
+    align-items: center; 
+    background-color:white; 
+    padding: 20px;
+
+} 
+
+header .logo img{
+    height: 50px;
+} 
+
+header nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+}
+
+header nav ul li{
+    margin-right: 20px;
+} 
+
+header nav ul li a{
+    /* bỏ gạch chân */
+    text-decoration: none; 
+    color:black; 
+    font-size: 20px;
+    padding: 10px 15px;
+    /* chuyển hiệu ứng chuyển màu nền khi di chuột vào liên kết */
+    transition: background-color 0.3s ease;
+}  
+
+header nav ul li a:hover {
+    background-color:rgb(177, 151, 190);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product-image img{
+    width: 300px;
+    height: auto;
+    transition: transform 0.3 ease;
+}
+
+/* phóng to 1.1 lần khi hover */
+.product-image img:hover{
+    transform: scale(1.1)
+} 
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    max-width: 500px;
+}
+
+.product-info h1{
+    font-size: 40px;
+    color:pink;
+    margin-bottom: 15px;
+}
+
+.product {
+    margin-bottom: 20px;
+} 
+
+.product-info p {
+    font-size: 20px;
+    color:wheat;
+    margin-bottom: 10px;
+} 
+
+.buttons {
+    display:flex;
+    gap: 15px;    
+}
+
+.buy-now, .add-to-cart {
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+
+.buy-now{
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background-color:brown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.add-to-cart:hover {
+    background-color: #d6560c;
+    transform: scale(1.05);
+} 
+footer{
+    
+    color: white; 
+    text-align: center; 
+    padding: 30px 20px;  
+    font-size: 18px; 
+}
+
+
